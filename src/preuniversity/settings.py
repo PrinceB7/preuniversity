@@ -33,12 +33,17 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'account',
+    'registration',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third party apps
+    'social.apps.django_app.default',
+
 ]
 
 MIDDLEWARE = [
@@ -140,6 +145,13 @@ CACHE_MIDDLEWARE_KEY_PREFIX = 'educa'
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
+        'LOCATION': '127.0.0.1:8000',
     }
 }
+
+# registration settings
+ACCOUNT_ACTIVATION_DAYS = 3
+
+#email settings
+# TODO change to stmp backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
