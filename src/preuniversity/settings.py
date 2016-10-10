@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'account',
-    # 'registration',
+    'registration',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # third party apps
     'social.apps.django_app.default',
     'ckeditor',
+
+    'course',
 
 ]
 

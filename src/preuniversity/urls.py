@@ -18,13 +18,13 @@ from django.contrib import admin
 from django.conf import settings
 from account import urls
 from django.conf.urls.static import static
-# from registration.backends.default import urls as reg_urls
+from registration.backends.default import urls as reg_urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include(urls)),
-    # url(r'^accounts/', include(reg_urls)),
+    url(r'^accounts/', include(reg_urls)),
 ]
 
 if settings.DEBUG:
