@@ -3,6 +3,7 @@ from django.conf import settings
 from django.utils.timezone import now
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from registration.models import RegistrationProfile
 
 
 class Profile(models.Model):
@@ -23,6 +24,8 @@ class Profile(models.Model):
         ('qoraqalpogiston', 'Qoraqalpog\'iston'),
     )
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    # user = RegistrationProfile.user
+
     date_of_birth = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='users/%Y/%m/%d', blank=True)
     date_of_join = models.DateTimeField(blank=True, default=now)

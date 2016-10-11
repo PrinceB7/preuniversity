@@ -44,8 +44,11 @@ INSTALLED_APPS = [
     # third party apps
     'social.apps.django_app.default',
     'ckeditor',
-
     'course',
+    # test these apps
+    'email_confirm_la',
+    'simple_email_confirmation',
+
 
 ]
 
@@ -88,7 +91,7 @@ WSGI_APPLICATION = 'preuniversity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': location('db.sqlite3'),
+        'NAME': location('mydatabse'),
     }
 }
 

@@ -106,5 +106,6 @@ pip-selfcheck.json
 .idea
 
 src/db.sqlite3
+mydatabse
 
 static
