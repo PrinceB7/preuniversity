@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'account',
     'registration',
 
     'django.contrib.admin',
@@ -45,11 +45,6 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'ckeditor',
     'course',
-    # test these apps
-    'email_confirm_la',
-    'simple_email_confirmation',
-
-
 ]
 
 MIDDLEWARE = [
@@ -68,7 +63,7 @@ ROOT_URLCONF = 'preuniversity.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [location('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -114,6 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social.backends.facebook.Facebook2OAuth2',
+)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -139,10 +140,6 @@ STATICFILES_DIRS = (location('assets'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = location('media/')
 
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'account.authentication.EmailAuthBackend',
-)
 
 CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 60 * 15  # 15 minutes
@@ -155,8 +152,12 @@ CACHES = {
     }
 }
 
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
+
 # registration settings
-ACCOUNT_ACTIVATION_DAYS = 3
+ACCOUNT_ACTIVATION_DAYS = 5
 
 #email settings
 # TODO change to stmp backend
