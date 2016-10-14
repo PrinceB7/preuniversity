@@ -174,7 +174,7 @@ class RegistrationProfile(models.Model):
         verbose_name_plural = _('profiles')
 
     def __str__(self):
-        return "Registration information for %s" % self.user
+        return "Profile information for %s" % self.user
 
     def create_new_activation_key(self, save=True):
         salt = hashlib.sha1(six.text_type(random.random())

@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'account.authentication.EmailAuthBackend',
+    'registration.authentication.EmailAuthBackend',
     'social.backends.facebook.Facebook2OAuth2',
 )
 
