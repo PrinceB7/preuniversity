@@ -1,30 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Andrew Grigorev <andrew@ei-grad.ru>, 2015.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-14 21:22+0500\n"
-"PO-Revision-Date: 2015-09-09 00:39+0300\n"
-"Last-Translator: Andrew Grigorev <andrew@ei-grad.ru>\n"
-"Language-Team: Russian <>\n"
-"Language: ru_RU\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 2.0\n"
 
 #: .\registration\admin.py:25
 msgid "Activate users"
-msgstr "Активировать учетные записи"
+msgstr "Foydalanuvchini faollashtirish"
 
 #: .\registration\admin.py:46
 msgid "Re-send activation emails"
-msgstr "Выслать ключи активации заново"
+msgstr "Faollashtiruvchi pochtani qayta yuborish"
 
 #: .\registration\forms.py:17
 msgid "E-mail"
@@ -32,35 +31,31 @@ msgstr "E-mail"
 
 #: .\registration\forms.py:26
 msgid "I have read and agree to the Terms of Service"
-msgstr "Я прочитал Правила Использования и согласен с ними"
+msgstr ""
 
 #: .\registration\forms.py:27
 msgid "You must agree to the terms to register"
-msgstr "Для регистрации Вы должны согласиться с Правилами"
+msgstr ""
 
 #: .\registration\forms.py:33
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
 msgstr ""
-"Этот адрес электронной почты уже используется. Пожалуйста, введите другой "
-"адрес."
 
 #: .\registration\forms.py:46
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
 msgstr ""
-"Регистрация с использованием свободных почтовых серверов запрещена. "
-"Пожалуйста, введите другой адрес электронной почты."
 
 #: .\registration\models.py:159
 msgid "user"
-msgstr "пользователь"
+msgstr ""
 
 #: .\registration\models.py:161
 msgid "activation key"
-msgstr "ключ активации"
+msgstr ""
 
 #: .\registration\models.py:173
 msgid "profile"
@@ -72,23 +67,23 @@ msgstr ""
 
 #: .\registration\templates\registration\activate.html:5
 msgid "Account activation failed."
-msgstr "Активация аккаунта не удалась."
+msgstr ""
 
 #: .\registration\templates\registration\activation_complete.html:4
 msgid "Account Activated"
-msgstr "Учетная запись активирована"
+msgstr ""
 
 #: .\registration\templates\registration\activation_complete.html:8
 msgid "Your account is now activated."
-msgstr "Ваша учетная запись теперь активирована."
+msgstr ""
 
 #: .\registration\templates\registration\activation_complete.html:10
 msgid "You can log in."
-msgstr "Вы можете войти."
+msgstr ""
 
 #: .\registration\templates\registration\activation_email.html:6
 msgid "registration"
-msgstr "регистрация"
+msgstr ""
 
 #: .\registration\templates\registration\activation_email.html:11
 #, python-format
@@ -100,11 +95,6 @@ msgid ""
 "    and your address will be removed from our records.\n"
 "    "
 msgstr ""
-"\n"
-"  Вы (или кто-то выдающий себя за вас) оставил заявку на регистрацию\n"
-"  учетной записи на %(site_name)s. Если это были не вы, то проигнорируйте "
-"это сообщение, и ваш почтовый адрес будет удален из наших записей.\n"
-"  "
 
 #: .\registration\templates\registration\activation_email.html:18
 #, python-format
@@ -115,10 +105,6 @@ msgid ""
 "    %(expiration_days)s days:\n"
 "    "
 msgstr ""
-"\n"
-"    Чтобы активировать эту учетную запись, перейдите по следующей ссылке в "
-"течении %(expiration_days)s дней:\n"
-"    "
 
 #: .\registration\templates\registration\activation_email.html:30
 #, python-format
@@ -128,10 +114,6 @@ msgid ""
 "    %(site_name)s Management\n"
 "    "
 msgstr ""
-"\n"
-"    С уважением,<br>\n"
-"    Команда %(site_name)s\n"
-"    "
 
 #: .\registration\templates\registration\activation_email.txt:2
 #, python-format
@@ -141,10 +123,6 @@ msgid ""
 "%(site_name)s.  If this wasn't you, please ignore this email\n"
 "and your address will be removed from our records.\n"
 msgstr ""
-"\n"
-"Вы (или кто-то выдающий себя за вас) оставил заявку на регистрацию\n"
-"учетной записи на %(site_name)s. Если это были не вы, то проигнорируйте\n"
-"это сообщение, и ваш почтовый адрес будет удален из наших записей.\n"
 
 #: .\registration\templates\registration\activation_email.txt:7
 #, python-format
@@ -153,9 +131,6 @@ msgid ""
 "To activate this account, please click the following link within the next\n"
 "%(expiration_days)s days:\n"
 msgstr ""
-"\n"
-"Чтобы активировать эту учетную запись, перейдите по следующей ссылке\n"
-"в течении %(expiration_days)s дней:\n"
 
 #: .\registration\templates\registration\activation_email.txt:14
 #, python-format
@@ -164,63 +139,60 @@ msgid ""
 "Sincerely,\n"
 "%(site_name)s Management\n"
 msgstr ""
-"\n"
-"С уважением,\n"
-"Команда %(site_name)s\n"
 
 #: .\registration\templates\registration\activation_email_subject.txt:1
 msgid "Account activation on"
-msgstr "Активация учетной записи на"
+msgstr ""
 
 #: .\registration\templates\registration\login.html:4
 #: .\registration\templates\registration\login.html:10
 msgid "Log in"
-msgstr "Войти"
+msgstr ""
 
 #: .\registration\templates\registration\login.html:14
 msgid "Forgot your password?"
-msgstr "Забыли свой пароль?"
+msgstr ""
 
 #: .\registration\templates\registration\login.html:14
 msgid "Reset it"
-msgstr "Сбросьте его"
+msgstr ""
 
 #: .\registration\templates\registration\login.html:15
 msgid "Not a member?"
-msgstr "Нет учетной записи?"
+msgstr ""
 
 #: .\registration\templates\registration\login.html:15
 msgid "Register"
-msgstr "Зарегистрироваться"
+msgstr ""
 
 #: .\registration\templates\registration\logout.html:4
 msgid "Logged out"
-msgstr "Выход"
+msgstr ""
 
 #: .\registration\templates\registration\logout.html:7
 msgid "Successfully logged out"
-msgstr "Вы успешно вышли из своей учетной записи"
+msgstr ""
 
 #: .\registration\templates\registration\password_change_done.html:4
 msgid "Password changed"
-msgstr "Пароль изменен"
+msgstr ""
 
 #: .\registration\templates\registration\password_change_done.html:7
 msgid "Password successfully changed!"
-msgstr "Пароль успешно изменен!"
+msgstr ""
 
 #: .\registration\templates\registration\password_change_form.html:4
 #: .\registration\templates\registration\password_change_form.html:10
 msgid "Change password"
-msgstr "Изменить пароль"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_complete.html:4
 msgid "Password reset complete"
-msgstr "Сброс пароля завершен"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_complete.html:8
 msgid "Your password has been reset!"
-msgstr "Ваш пароль был сброшен!"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_complete.html:9
 #, python-format
@@ -229,19 +201,19 @@ msgstr ""
 
 #: .\registration\templates\registration\password_reset_confirm.html:4
 msgid "Confirm password reset"
-msgstr "Подтверждение сброса пароля"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_confirm.html:7
 msgid "Enter your new password below to reset your password:"
-msgstr "Введите ваш новый пароль:"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_confirm.html:11
 msgid "Set password"
-msgstr "Установить пароль"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_done.html:4
 msgid "Password reset"
-msgstr "Сброс пароля"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_done.html:8
 msgid ""
@@ -251,34 +223,19 @@ msgid ""
 "    your email and click the link to continue.\n"
 "    "
 msgstr ""
-"\n"
-"    Вам было отправлено письмо со ссылкой на сброс пароля. Проверьте\n"
-"    вашу почту и перейдите по указанной ссылке для продолжения.\n"
-"    "
 
 #: .\registration\templates\registration\password_reset_email.html:3
 msgid "Greetings"
-msgstr "Привет"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_email.html:5
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "You are receiving this email because you (or someone pretending to be "
-#| "you)\n"
-#| "requested that your password be reset on the %(domain)s site.  If you do "
-#| "not \n"
-#| "wish to reset your password, please ignore this message.\n"
+#, python-format
 msgid ""
 "\n"
 "You are receiving this email because you (or someone pretending to be you)\n"
 "requested that your password be reset on the %(domain)s site. If you do not\n"
 "wish to reset your password, please ignore this message.\n"
 msgstr ""
-"\n"
-"Вы получили это письмо потому что вы (или кто-то выдающий себя за вас)\n"
-"запросил сброс пароля на сайте %(domain)s. Если это были не вы, то просто\n"
-"проигнорируйте это сообщение.\n"
 
 #: .\registration\templates\registration\password_reset_email.html:11
 msgid ""
@@ -287,25 +244,23 @@ msgid ""
 "it\n"
 "into your web browser:\n"
 msgstr ""
-"\n"
-"Чтобы сбросить пароль, перейдите по следующей ссылке:\n"
 
 #: .\registration\templates\registration\password_reset_email.html:18
 msgid "Your username, in case you've forgotten:"
-msgstr "Ваше имя пользователя, на случай если вы его забыли:"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_email.html:21
 msgid "Best regards"
-msgstr "С уважением,"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_email.html:22
 msgid "Management"
-msgstr " "
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_form.html:4
 #: .\registration\templates\registration\password_reset_form.html:15
 msgid "Reset password"
-msgstr "Сбросить пароль"
+msgstr ""
 
 #: .\registration\templates\registration\password_reset_form.html:8
 msgid ""
@@ -314,58 +269,27 @@ msgid ""
 "you instructions for creating a new one.\n"
 "    "
 msgstr ""
-"\n"
-"    Забыли свой пароль? Введите свой адрес электронной почты и мы отправим "
-"вам инструкции по установке нового пароля.\n"
-"    "
 
 #: .\registration\templates\registration\registration_closed.html:4
 msgid "Registration is closed"
-msgstr "Регистрация закрыта"
+msgstr ""
 
 #: .\registration\templates\registration\registration_closed.html:7
 msgid "Sorry, but registration is closed at this moment. Come back later."
-msgstr "Извините, но регистрация в данный момент закрыта. Попробуйте позже."
+msgstr ""
 
 #: .\registration\templates\registration\registration_complete.html:4
 msgid "Activation email sent"
-msgstr "Письмо активации отправлено"
+msgstr ""
 
 #: .\registration\templates\registration\registration_complete.html:7
 msgid "Please check your email to complete the registration process."
-msgstr "Проверьте свою электронную почту для завершения процесса регистрации."
+msgstr ""
 
 #: .\registration\templates\registration\registration_form.html:4
 msgid "Register for an account"
-msgstr "Регистрация учетной записи"
+msgstr ""
 
 #: .\registration\templates\registration\registration_form.html:10
 msgid "Submit"
-msgstr "Отправить"
-
-#~ msgid "registration profile"
-#~ msgstr "карточка регистрации"
-
-#~ msgid "registration profiles"
-#~ msgstr "карточки регистрации"
-
-#~ msgid "You may now"
-#~ msgstr "Вы можете теперь"
-
-#~ msgid "log in"
-#~ msgstr "войти"
-
-#~ msgid "Username"
-#~ msgstr "Имя пользователя"
-
-#~ msgid "This value must contain only letters, numbers and underscores."
-#~ msgstr "Это поле может содержать только буквы, цифры и подчеркивания"
-
-#~ msgid "Email address"
-#~ msgstr "Адрес электронной почты"
-
-#~ msgid "A user with that username already exists."
-#~ msgstr "Пользователь с таким именем уже существует."
-
-#~ msgid "The two password fields didn't match."
-#~ msgstr "Введенные пароли не совпадают."
+msgstr ""

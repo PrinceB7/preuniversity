@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import django.conf.locale
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -113,6 +115,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'registration.authentication.EmailAuthBackend',
     'social.backends.facebook.Facebook2OAuth2',
+    'social.backends.google.GooglePlusAuth',
 )
 
 
@@ -120,6 +123,28 @@ AUTHENTICATION_BACKENDS = (
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+gettext_noop = lambda s: s
+
+LANGUAGES = (
+    ('en', gettext_noop('English')),
+    ('ru', gettext_noop('Russian')),
+    ('uz', gettext_noop('Uzbek')),
+)
+
+EXTRA_LANG_INFO = {
+    'uz': {
+        'bidi': False,
+        'code': 'uz',
+        'name': 'Uzbek',
+        'name_local': "O'zbekcha",  # unicode codepoints here
+    },
+}
+django.conf.locale.LANG_INFO.update(EXTRA_LANG_INFO)
+
+LOCALE_PATHS = (
+    location('locale'),
+)
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -159,10 +184,11 @@ LOGOUT_URL = reverse_lazy('logout')
 # registration settings
 ACCOUNT_ACTIVATION_DAYS = 5
 
-#email settings
+# email settings
 # TODO change to stmp backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# ckeditor settings
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',

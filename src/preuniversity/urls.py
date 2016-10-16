@@ -1,17 +1,17 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
-# from account import urls
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
-
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^account/', include(urls)),
-    url(r'^accounts/', include('registration.urls')),
     url('social-auth/', include('social.apps.django_app.urls', namespace='social')),
-
 ]
+
+urlpatterns += i18n_patterns(
+                             url(r'^accounts/', include('registration.urls')),
+                             )
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

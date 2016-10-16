@@ -10,6 +10,7 @@ from .users import UsernameField
 class RegistrationAdmin(admin.ModelAdmin):
     actions = ['activate_users', 'resend_activation_email']
     list_display = ('user', 'activation_key_expired')
+    exclude = ['activation_key']
     raw_id_fields = ['user']
     search_fields = ('user__{0}'.format(UsernameField()),
                      'user__first_name', 'user__last_name')
