@@ -11,6 +11,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
                              url(r'^accounts/', include('registration.urls')),
+                             url(r'^course/', include('course.urls')),
                              )
 
 if settings.DEBUG:

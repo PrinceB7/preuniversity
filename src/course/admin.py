@@ -11,30 +11,13 @@ class SubjectAdmin(admin.ModelAdmin):
         return safe(obj.description[:100])
 
 
-class LectureAdmin(admin.ModelAdmin):
-    list_display = ['title', 'get_description', 'image', 'subject']
-    fields = ['title', 'description', 'image', 'subject']
-
-    def get_description(self, obj):
-        return safe(obj.description[:100])
-
-
 class TopicAdmin(admin.ModelAdmin):
-    list_display = ['title', 'get_description', 'image', 'lecture']
-    fields = ['title', 'description', 'image', 'lecture']
+    list_display = ['title', 'get_description', 'image', 'subject']
+    fields = ['subject', 'title', 'description', 'image', 'video', 'position']
 
     def get_description(self, obj):
         return safe(obj.description[:100])
 
-
-class ContentAdmin(admin.ModelAdmin):
-    list_display = ['title', 'get_description', 'image', 'video', 'topic']
-    fields = ['title', 'description', 'image', 'video', 'topic']
-
-    def get_description(self, obj):
-        return safe(obj.description[:100])
 
 admin.site.register(Subject, SubjectAdmin)
-admin.site.register(Lecture, LectureAdmin)
 admin.site.register(Topics, TopicAdmin)
-admin.site.register(Content, ContentAdmin)
