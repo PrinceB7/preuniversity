@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Topic</title>
 </head>
+
 <body>
 <h1>{{ topic.subject }}</h1>
 <h2>{{ topic.title }}</h2>
 <p>{{ topic.description|safe }}</p>
 
-<p>previous - {{ topic.get_previous }} ||||||||| next - {{ topic.get_next }}</p>
+{% if topic.get_previous %}
+<a href="{% url 'detail_of_topic' topic_title=topic.get_previous|slugify %}"><<-{{ topic.get_previous }}</a>
+{% endif %}
+choose topic
+{% if topic.get_next %}
+<a href="{% url 'detail_of_topic' topic_title=topic.get_next|slugify %}">{{ topic.get_next }}->></a>
+{% endif %}
+
 </body>
+
 </html>

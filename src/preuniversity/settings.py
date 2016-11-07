@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'ckeditor',
     'course',
+    # chaeck this package
+    # 'reportlab'
 ]
 
 MIDDLEWARE = [

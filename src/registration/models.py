@@ -167,6 +167,11 @@ class RegistrationProfile(models.Model):
     region = models.CharField(max_length=50, choices=REGIONS, default='tashkent_city')
     self_description = RichTextField(blank=True)
 
+    mathematics_access = models.PositiveIntegerField(default=0)
+    physics_access = models.PositiveIntegerField(default=0)
+    english_access = models.PositiveIntegerField(default=0)
+    ielts_access = models.PositiveIntegerField(default=0)
+
     objects = RegistrationManager()
 
     class Meta:

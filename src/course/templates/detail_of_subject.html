@@ -6,12 +6,18 @@
 </head>
 <body>
 <h1>{{ subject.name }}</h1>
-<h3>Contents of the subject:</h3>
+<h2>Contents of the subject:</h2>
 
 {% for topic in topics %}
-    <a href="{% url 'detail_of_topic' topic_title=topic.title %}">{{ topic.title }}</a>
+    <a href="{% url 'detail_of_topic' topic_title=topic|slugify %}">{{ topic.title }}</a>
     <br>
 {% endfor %}
+<h1>Homeworks</h1>
+{% for homework in homeworks %}
+    <a href="{% url 'detail_of_homework' title=homework|slugify %}">{{ homework.title }}</a>
+    <br>
+{% endfor %}
+
 
 </body>
 </html>
