@@ -5,8 +5,11 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # url(r'^poll/', include(poll_urls)),
+    # url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^admin/', admin.site.urls),
     url('social-auth/', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^q/', include('Exam.quiz.urls')),
 ]
 
 urlpatterns += i18n_patterns(

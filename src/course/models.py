@@ -2,8 +2,6 @@ from datetime import timedelta
 from django.db import models
 from django.template.defaultfilters import safe
 from ckeditor.fields import RichTextField
-from django.utils.datetime_safe import datetime
-from django.utils.timezone import now
 from social.utils import slugify
 
 

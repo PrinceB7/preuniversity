@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 21:22+0500\n"
+"POT-Creation-Date: 2016-11-19 16:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\registration\admin.py:25
+#: .\registration\admin.py:26
 msgid "Activate users"
 msgstr ""
 
-#: .\registration\admin.py:46
+#: .\registration\admin.py:47
 msgid "Re-send activation emails"
 msgstr ""
 
@@ -57,11 +57,11 @@ msgstr ""
 msgid "activation key"
 msgstr ""
 
-#: .\registration\models.py:173
+#: .\registration\models.py:178
 msgid "profile"
 msgstr ""
 
-#: .\registration\models.py:174
+#: .\registration\models.py:179
 msgid "profiles"
 msgstr ""
 

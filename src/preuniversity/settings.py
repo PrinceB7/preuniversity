@@ -46,8 +46,16 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'ckeditor',
     'course',
+
+
+    'Exam.quiz',
+    'Exam.multichoice',
+    'Exam.true_false',
+    'Exam.essay',
+
     # chaeck this package
     # 'reportlab'
+    # 'polls'
 ]
 
 MIDDLEWARE = [
@@ -90,7 +98,7 @@ WSGI_APPLICATION = 'preuniversity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': location('mydatabse'),
+        'NAME': location('DBMS'),
     }
 }
 
@@ -129,7 +137,6 @@ LANGUAGE_CODE = 'en-us'
 gettext_noop = lambda s: s
 
 LANGUAGES = (
-    ('en', gettext_noop('English')),
     ('ru', gettext_noop('Russian')),
     ('uz', gettext_noop('Uzbek')),
 )

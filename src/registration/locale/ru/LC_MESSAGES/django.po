@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 21:22+0500\n"
+"POT-Creation-Date: 2016-11-21 11:13+0500\n"
 "PO-Revision-Date: 2015-09-09 00:39+0300\n"
 "Last-Translator: Andrew Grigorev <andrew@ei-grad.ru>\n"
 "Language-Team: Russian <>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: .\registration\admin.py:25
+#: .\registration\admin.py:26
 msgid "Activate users"
 msgstr "Активировать учетные записи"
 
-#: .\registration\admin.py:46
+#: .\registration\admin.py:47
 msgid "Re-send activation emails"
 msgstr "Выслать ключи активации заново"
 
@@ -62,11 +62,11 @@ msgstr "пользователь"
 msgid "activation key"
 msgstr "ключ активации"
 
-#: .\registration\models.py:173
+#: .\registration\models.py:178
 msgid "profile"
 msgstr ""
 
-#: .\registration\models.py:174
+#: .\registration\models.py:179
 msgid "profiles"
 msgstr ""
 

@@ -1,5 +1,5 @@
 defusedxml==0.4.1
-Django==1.10.2
+Django==1.10.3
 django-ckeditor==5.1.1
 oauthlib==2.0.0
 Pillow==3.4.1
@@ -8,4 +8,7 @@ python-social-auth==0.2.21
 python3-openid==3.0.10
 requests==2.11.1
 requests-oauthlib==0.7.0
-six==1.10.0
+six==1.10
+
+#django-quiz
+django-model-utils>=2.0.3
