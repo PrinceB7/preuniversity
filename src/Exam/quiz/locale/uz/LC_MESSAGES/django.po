@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-21 11:13+0500\n"
+"POT-Creation-Date: 2016-11-22 16:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,11 @@ msgstr ""
 #: .\Exam\quiz\templates\quiz\quiz_list.html:13
 #: .\Exam\quiz\templates\quiz\sitting_detail.html:10
 msgid "Category"
-msgstr ""
+msgstr "Kategoriya"
 
 #: .\Exam\quiz\models.py:38
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriyalar"
 
 #: .\Exam\quiz\models.py:48 .\Exam\quiz\models.py:58 .\Exam\quiz\models.py:551
 msgid "Sub-Category"
@@ -383,7 +383,7 @@ msgstr ""
 
 #: .\Exam\quiz\templates\quiz\sitting_list.html:6
 msgid "List of complete exams"
-msgstr ""
+msgstr "Yakunlangan imtixonlar ro'yxati"
 
 #: .\Exam\quiz\templates\quiz\sitting_list.html:28
 msgid "Filter"

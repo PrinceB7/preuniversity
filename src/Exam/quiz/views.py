@@ -11,7 +11,7 @@ from .models import Quiz, Category, Progress, Sitting, Question
 from ..essay.models import Essay_Question
 
 
-class QuizMarkerMixin(object):
+class QuizMarkerMixin:
     @method_decorator(login_required)
     @method_decorator(permission_required('quiz.view_sittings'))
     def dispatch(self, *args, **kwargs):
@@ -111,7 +111,7 @@ class QuizMarkingList(QuizMarkerMixin, SittingFilterTitleMixin, ListView):
 class QuizMarkingDetail(QuizMarkerMixin, DetailView):
     model = Sitting
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, **kwargs):
         sitting = self.get_object()
 
         q_to_toggle = request.POST.get('qid', None)
@@ -124,10 +124,9 @@ class QuizMarkingDetail(QuizMarkerMixin, DetailView):
 
         return self.get(request)
 
-    def get_context_data(self):
-        context = super(QuizMarkingDetail, self).get_context_data()
-        context['questions'] =\
-            context['sitting'].get_questions(with_answers=True)
+    def get_context_data(self, *args, **kwargs):
+        context = super(QuizMarkingDetail, self).get_context_data(**kwargs)
+        context['questions'] = context['sitting'].get_questions(with_answers=True)
         return context
 
 

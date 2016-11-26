@@ -9,11 +9,11 @@ urlpatterns = [
     # url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^admin/', admin.site.urls),
     url('social-auth/', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^q/', include('Exam.quiz.urls')),
 ]
 
 urlpatterns += i18n_patterns(
                              url(r'^accounts/', include('registration.urls')),
+                             url(r'^q/', include('Exam.quiz.urls')),
                              url(r'^course/', include('course.urls')),
                              )
 

@@ -128,6 +128,8 @@ AUTHENTICATION_BACKENDS = (
     'social.backends.google.GooglePlusAuth',
 )
 
+SOCIAL_AUTH_FACEBOOK_KEY = '217733491952904' # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '1a578bf99a85c207f43bdde6f75654ab' # Facebook App Secret
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -137,6 +139,7 @@ LANGUAGE_CODE = 'en-us'
 gettext_noop = lambda s: s
 
 LANGUAGES = (
+    ('en', gettext_noop('English')),
     ('ru', gettext_noop('Russian')),
     ('uz', gettext_noop('Uzbek')),
 )
@@ -187,8 +190,8 @@ CACHES = {
 }
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
-LOGIN_URL = reverse_lazy('login')
-LOGOUT_URL = reverse_lazy('logout')
+LOGIN_URL = reverse_lazy('auth_login')
+LOGOUT_URL = reverse_lazy('auth_logout')
 
 # registration settings
 ACCOUNT_ACTIVATION_DAYS = 5
