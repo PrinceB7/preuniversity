@@ -1,0 +1,167 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head><title>Pre University {% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LIBRARY FONT-->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300">
+    <link type="text/css" rel="stylesheet" href="{% static "font/font-icon/font-awesome-4.4.0/css/font-awesome.css" %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'font/font-icon/font-svg/css/Glyphter.css' %}">
+    <!-- LIBRARY CSS-->
+    <link type="text/css" rel="stylesheet" href="{% static 'imageslogo-color-1.png' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/animate/animate.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/color-1.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/owl-carousel-2.0/assets/owl.carousel.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/selectbox/css/jquery.selectbox.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox-buttons.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/media-element/build/mediaelementplayer.min.css' %}">
+    <!-- STYLE CSS    --><!--link(type="text/css", rel='stylesheet', href='assets/css/color-1.css', id="color-skins")-->
+    <link type="text/css" rel="stylesheet" href="#" id="color-skins">
+    <script src="{% static 'libs/jquery/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'libs/js-cookie/js.cookie.js' %}"></script>
+
+</head>
+<body>
+<!-- HEADER-->
+<header>
+    <div class="header-topbar">
+        <div class="container">
+            <div class="topbar-left pull-left">
+                <div class="email"><a href="#"><i class="topbar-icon fa fa-envelope-o"></i><span>info@inha.uz</span></a></div>
+                <div class="hotline"><a href="#"><i class="topbar-icon fa fa-phone"></i><span>+998 71 2899999</span></a></div>
+            </div>
+            <div class="topbar-right pull-right">
+                <div class="socials"><a href="#" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" class="google"><i class="fa fa-google-plus"></i></a><a href="#" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a><a href="#" class="blog"><i class="fa fa-rss"></i></a><a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a></div>
+                <div class="group-sign-in"><a href="{% url 'auth_login' %}" class="login">login</a><a href="register.html" class="register">register</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="header-main homepage-01">
+        <div class="container">
+            <div class="header-main-wrapper">
+                <div class="navbar-heade">
+                    <div class="logo pull-left"><a href="index.html" class="header-logo"><img src="{% static 'images/logo-color-1.png' %}" alt=""/></a></div>
+                    <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle edugate-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <nav class="navigation collapse navbar-collapse pull-right">
+                    <ul class="nav-links nav navbar-nav">
+                        <li><a href="index.html" class="main-menu">Home</a></li>
+                        <li class="dropdown"><a href="javascript:void(0)" class="main-menu">Courses<span class="fa fa-angle-down icons-dropdown"></span></a>
+                            <ul class="dropdown-menu edugate-dropdown-menu-1">
+                                <li><a href="courses.html" class="link-page">courses</a></li>
+                                <li><a href="courses-detail.html" class="link-page">course detail</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery-3column.html" class="main-menu">gallery</a></li>
+                        <li><a href="about-us.html" class="main-menu">about us</a></li>
+                        <li><a href="news.html" class="main-menu">news</a></li>
+                        <li><a href="contact.html" class="main-menu">Contact</a></li>
+                        <li class="button-search"><p class="main-menu"><i class="fa fa-search"></i></p></li>
+                        <div class="nav-search hide">
+                            <form><input type="text" placeholder="Search" class="searchbox"/>
+                                <button type="submit" class="searchbutton fa fa-search"></button>
+                            </form>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<!-- FOOTER-->
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-main-wrapper">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="col-md-4">
+                            <div class="edugate-widget widget">
+                                <div class="title-widget">INHA</div>
+                                <div class="content-widget"><p>Pre university of IUT is a great start for an education personnel or organization to start the online business with 1 Click.</p>
+
+                                    <div class="info-list">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-envelope-o"></i><a href="#">info@inha.uz</a></li>
+                                            <li><i class="fa fa-phone"></i><a href="#">(71) 289 99 99</a></li>
+                                            <li><i class="fa fa-map-marker"></i><a href="#"><p>9, Ziyolilar, Tashkent city</p>
+
+                                                <p>Uzbekistan</p></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="col-md-4">
+                            <div class="gallery-widget widget">
+                                <div class="title-widget">GALLERY</div>
+                                <div class="content-widget">
+                                    <div class="gallery-list"><a href="#" class="thumb"><img src="assets/images/gallery/gallery-01.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-02.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-03.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-04.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-05.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-06.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-07.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-08.jpg"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        alt="" class="img-responsive"/></a></div>
+                                    <div class="clearfix"></div>
+                                    <a href="gallery-3column.html" class="view-more">View more&nbsp;<i class="fa fa-angle-double-right mls"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mailing-widget widget">
+                                <div class="title-widget">MAILING</div>
+                                <div class="content-wiget"><p>Sign up for our mailing list to get latest updates and offers.</p>
+
+                                    <form action="http://inha.uz">
+                                        <div class="input-group"><input type="text" placeholder="Email address" class="form-control form-email-widget"/><span class="input-group-btn"><input type="submit" value="✓" class="btn btn-email"/></span></div>
+                                    </form>
+                                    <p>We respect your privacy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hyperlink">
+                <div class="pull-left hyper-left">
+                    <ul class="list-inline">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="courses.html">COURSES</a></li>
+                        <li><a href="about-us.html">ABOUT</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right hyper-right">@ IUTLab</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="body-2 loading">
+    <div class="dots-loader"></div>
+</div>
+
+<script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'libs/smooth-scroll/jquery-smoothscroll.js' %}"></script>
+<script src="{% static 'libs/owl-carousel-2.0/owl.carousel.min.js' %}"></script>
+<script src="{% static 'libs/appear/jquery.appear.js' %}"></script>
+<script src="{% static 'libs/count-to/jquery.countTo.js' %}"></script>
+<script src="{% static 'libs/wow-js/wow.min.js' %}"></script>
+<script src="{% static 'libs/selectbox/js/jquery.selectbox-0.2.min.js' %}"></script>
+<script src="{% static 'libs/fancybox/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'libs/fancybox/js/jquery.fancybox-buttons.js' %}"></script>
+<!-- MAIN JS-->
+<script src="{% static 'js/main.js' %}"></script>
+<!-- LOADING SCRIPTS FOR PAGE-->
+<script src="{% static 'libs/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'libs/isotope/fit-columns.js' %}"></script>
+<script src="{% static 'js/pages/homepage.js' %}"></script>
+
+</body>

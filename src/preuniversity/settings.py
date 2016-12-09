@@ -34,8 +34,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,12 +44,8 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'ckeditor',
     'course',
-
-
-    'Exam.quiz',
-    'Exam.multichoice',
-    'Exam.true_false',
-    'Exam.essay',
+    'quiz',
+    'registration',
 
     # chaeck this package
     # 'reportlab'
@@ -92,13 +86,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'preuniversity.wsgi.application'
 
 
+SITE_ID = 1
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': location('DBMS'),
+        'NAME': location('database'),
     }
 }
 
@@ -128,8 +124,8 @@ AUTHENTICATION_BACKENDS = (
     'social.backends.google.GooglePlusAuth',
 )
 
-SOCIAL_AUTH_FACEBOOK_KEY = '217733491952904' # Facebook App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '1a578bf99a85c207f43bdde6f75654ab' # Facebook App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = '217733491952904'  # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '1a578bf99a85c207f43bdde6f75654ab'  # Facebook App Secret
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -172,7 +168,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = location('static')
-STATICFILES_DIRS = (location('assets'),)
+
+STATICFILES_DIRS = (
+    location('assets'),
+)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = location('media/')
@@ -180,7 +179,7 @@ MEDIA_ROOT = location('media/')
 
 CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 60 * 15  # 15 minutes
-CACHE_MIDDLEWARE_KEY_PREFIX = 'educa'
+CACHE_MIDDLEWARE_KEY_PREFIX = 'preuniversity'
 
 CACHES = {
     'default': {

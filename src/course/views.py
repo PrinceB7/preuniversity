@@ -13,8 +13,10 @@ def dashboard(request):
 def detail_of_subject(request, name):
     subject = get_object_or_404(Subject, slug=name)
     topics = subject.topics.all()
+    quizzes = subject.quizzes.all()
     homeworks = Homework.objects.filter(subject__name=name)
-    return render(request, 'detail_of_subject.html', {'subject': subject, 'topics': topics, 'homeworks': homeworks})
+    return render(request, 'detail_of_subject.html', {'subject': subject, 'topics': topics, 'homeworks': homeworks,
+                                                      'quizzes': quizzes})
 
 
 @login_required
@@ -26,3 +28,8 @@ def detail_of_topic(request, topic_title):
 def detail_of_homework(request, title):
     homework = Homework.objects.get(slug=title)
     return render(request, 'detail_of_homework.html', {'homework': homework})
+
+
+def index(request):
+    all_subjects = Subject.objects.all()
+    return render(request, 'index.html', {'courses': all_subjects})

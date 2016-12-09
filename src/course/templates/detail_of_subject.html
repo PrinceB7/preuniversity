@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,12 +13,49 @@
     <a href="{% url 'detail_of_topic' topic_title=topic|slugify %}">{{ topic.title }}</a>
     <br>
 {% endfor %}
-<h1>Homeworks</h1>
+<h2>Homeworks</h2>
 {% for homework in homeworks %}
     <a href="{% url 'detail_of_homework' title=homework|slugify %}">{{ homework.title }}</a>
     <br>
 {% endfor %}
 
+<h2>Quizzes</h2>
+{% if quizzes %}
+		<table class="table table-bordered table-striped">
+
+		  <thead>
+			<tr>
+			  <th>{% trans "Title" %}</th>
+			  <th>{% trans "Category" %}</th>
+			  <th>{% trans "Exam" %}</th>
+			  <th>{% trans "Single attempt" %}</th>
+			  <th></th>
+			</tr>
+		  </thead>
+
+		  <tbody>
+
+        {% for quiz in quizzes %}
+
+  			<tr>
+			  <td>{{ quiz.title }}</td>
+			  <td>{{ quiz.category }}</td>
+			  <td>{{ quiz.exam_paper }}</td>
+			  <td>{{ quiz.single_attempt }}</td>
+			  <td>
+				<a href="{% url 'quiz_start_page' slug=quiz.url %}">
+				  {% trans "View details" %}
+				</a>
+			</tr>
+
+        {% endfor %}
+		  </tbody>
+
+		</table>
+
+	{% else %}
+        <p>{% trans "There are no available quizzes" %}.</p>
+    {% endif %}
 
 </body>
 </html>

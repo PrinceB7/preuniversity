@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 import datetime
 import hashlib
 import random
@@ -171,6 +169,8 @@ class RegistrationProfile(models.Model):
     physics_access = models.PositiveIntegerField(default=0)
     english_access = models.PositiveIntegerField(default=0)
     ielts_access = models.PositiveIntegerField(default=0)
+
+    is_teacher = models.BooleanField(default=False)
 
     objects = RegistrationManager()
 
