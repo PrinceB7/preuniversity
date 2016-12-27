@@ -2195,7 +2195,7 @@ footer {
 }
 
 .slider-item .slider-1, .slider-item .slider-2, .slider-item .slider-3 {
-    background-image: url("../images/background-slider-1.jpg");
+    background-image: url(../images/background-slider-1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2205,7 +2205,7 @@ footer {
 }
 
 .slider-item .slider-2 {
-    background-image: url("../images/bg-404.jpg")
+    background-image: url(../images/bg-404.jpg)
 }
 
 .slider-item .slider-2 .slider-caption {
@@ -2213,7 +2213,7 @@ footer {
 }
 
 .slider-item .slider-3 {
-    background-image: url("../images/banner-2.jpg")
+    background-image: url(../images/banner-2.jpg)
 }
 
 .slider-item .slider-3 .slider-caption {

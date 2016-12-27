@@ -2,8 +2,7 @@
 {% load staticfiles %}
 {% block title %}| Home{% endblock %}
 {% block content %}
-<!-- WRAPPER-->
-<div id="wrapper-content"><!-- PAGE WRAPPER-->
+    <div id="wrapper-content"><!-- PAGE WRAPPER-->
     <div id="page-wrapper"><!-- MAIN CONTENT-->
         <div class="main-content"><!-- CONTENT-->
             <div class="content"><!-- SLIDER BANNER-->
@@ -51,7 +50,7 @@
                 <!-- CHOOSE COURSES-->
                 <div class="section section-padding choose-course">
                     <div class="container">
-                        <div class="group-title-index"><h4 class="top-title">CHOOSE YOUR COURSE</h4>
+                            <div class="group-title-index"><h4 class="top-title">CHOOSE YOUR COURSE</h4>
 
                             <h2 class="center-title">GET THE WORLD CLASS & VERIFIED COURSE</h2>
 
@@ -137,7 +136,7 @@
                                     <div class="content">
                                         <div class="col-sm-3">
                                             <div class="progress-bar-number">
-                                                <div data-from="0" data-to="45" data-speed="1000" class="num">0</div>
+                                                <div data-from="0" data-to="{{ n_of_teacher }}" data-speed="1000" class="num">0</div>
                                                 <p class="name-inner">teachers</p></div>
                                         </div>
                                         <div class="col-sm-3">
@@ -147,7 +146,7 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="progress-bar-number">
-                                                <div data-from="0" data-to="165" data-speed="1000" class="num">0</div>
+                                                <div data-from="0" data-to="{{ n_of_student }}" data-speed="1000" class="num">0</div>
                                                 <p class="name-inner">members</p></div>
                                         </div>
                                         <div class="col-sm-3">
@@ -160,10 +159,6 @@
                                 <div class="group-button">
                                     <button onclick="window.location.href='categories.html'" class="btn btn-transition-3"><span>Purchase theme</span></button>
                                     <button onclick="window.location.href='about-us.html'" class="btn btn-green-3"><span>start Learn now</span></button>
-                                </div>
-                                <div class="group-btn-slider">
-                                    <div class="btn-prev"><i class="fa fa-angle-left"></i></div>
-                                    <div class="btn-next"><i class="fa fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -189,14 +184,7 @@
                                                     <div class="author item"><a href="#">By Admin</a></div>
                                                     <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                                 </div>
-                                                <div class="info-more">
-                                                    <div class="view item"><i class="fa fa-user"></i>
 
-                                                        <p> 56</p></div>
-                                                    <div class="comment item"><i class="fa fa-comment"></i>
-
-                                                        <p> 239</p></div>
-                                                </div>
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-80"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.0.description|safe }}</div>
                                                 <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
@@ -208,20 +196,13 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.1.name }}</a>
+                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.1.name }} </a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
                                                     <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                                 </div>
-                                                <div class="info-more">
-                                                    <div class="view item"><i class="fa fa-user"></i>
 
-                                                        <p> 56</p></div>
-                                                    <div class="comment item"><i class="fa fa-comment"></i>
-
-                                                        <p> 239</p></div>
-                                                </div>
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-10"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.1.description|safe }}</div>
                                                 <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
@@ -235,57 +216,41 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">Photoghaphy Master</a>
+                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.2.name }}</a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
                                                     <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                                 </div>
-                                                <div class="info-more">
-                                                    <div class="view item"><i class="fa fa-user"></i>
 
-                                                        <p> 56</p></div>
-                                                    <div class="comment item"><i class="fa fa-comment"></i>
-
-                                                        <p> 239</p></div>
-                                                </div>
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-70"><strong class="rating">5.00</strong> out of 5</span></div>
-                                                <div class="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</div>
+                                                <div class="description">{{ courses.2.description|safe }}</div>
                                                 <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
-                                            <div class="edugate-image"><img src="assets/images/courses/courses-3.jpg" alt="" class="img-responsive"/></div>
+                                            <div class="edugate-image"><img src="{% static 'images/courses/courses-3.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
                                     </div>
                                 </div>
+                                {% if courses.3 %}
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">Photoghaphy Master</a>
+                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.3.name }}</a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
                                                     <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                                 </div>
-                                                <div class="info-more">
-                                                    <div class="view item"><i class="fa fa-user"></i>
 
-                                                        <p> 00</p></div>
-                                                    <div class="comment item"><i class="fa fa-comment"></i>
-
-                                                        <p> 02</p></div>
-                                                </div>
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-90"><strong class="rating">5.00</strong> out of 5</span></div>
-                                                <div class="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</div>
+                                                <div class="description">{{ courses.3.description|safe }}</div>
                                                 <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
-                                            <div class="edugate-image"><img src="assets/images/courses/courses-4.jpg" alt="" class="img-responsive"/></div>
+                                            <div class="edugate-image"><img src="{% static 'images/courses/courses-4.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-btn-top-courses-slider">
-                                <div class="btn-prev">&lsaquo;</div>
-                                <div class="btn-next">&rsaquo;</div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -294,12 +259,12 @@
                 <div class="section why-choose-us">
                     <div class="why-choose-us-wrapper-top">
                         <div class="container">
-                            <div class="why-choose-us-wrapper"><h2 class="title-2">Why Edugate?</h2>
+                            <div class="why-choose-us-wrapper"><h2 class="title-2">Why IUT Preuniversity?</h2>
 
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                                 <button onclick="window.location.href='categories.html'" class="btn btn-green-2"><span>start Learn now</span></button>
                             </div>
-                            <div data-wow-delay="0.2s" data-wow-duration="1.2s" class="background-girl-1 wow fadeInUp"><img src="assets/images/girl-1.png" alt="" class="img-responsive"/></div>
+                            <div data-wow-delay="0.2s" data-wow-duration="1.2s" class="background-girl-1 wow fadeInUp"><img src="{% static 'images/girl-1.png' %}" alt="" class="img-responsive"/></div>
                         </div>
                     </div>
                     <div class="why-choose-us-wrapper-bottom background-opacity">
@@ -336,7 +301,7 @@
                 <!-- PRICING-->
                 <div class="section section-padding pricing">
                     <div class="container">
-                        <div class="group-title-index"><h4 class="top-title">chooses your pricing</h4>
+                        <div class="group-title-index"><h4 class="top-title">choose your pricing</h4>
 
                             <h2 class="center-title">the best pricing we offered</h2>
 
@@ -429,7 +394,7 @@
                                 <div class="peopel-item item active"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
 
                                     <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="assets/images/people-avatar-1.jpg" alt="" class="img-responsive"/></div>
+                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
                                         <div class="peopel-name">john doe</div>
                                         <div class="people-job">Microshop Crop.SEO</div>
                                     </div>
@@ -437,7 +402,7 @@
                                 <div class="peopel-item item"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
 
                                     <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="assets/images/people-avatar-1.jpg" alt="" class="img-responsive"/></div>
+                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
                                         <div class="peopel-name">john doe</div>
                                         <div class="people-job">Microshop Crop.SEO</div>
                                     </div>
@@ -445,7 +410,7 @@
                                 <div class="peopel-item item"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
 
                                     <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="assets/images/people-avatar-1.jpg" alt="" class="img-responsive"/></div>
+                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
                                         <div class="peopel-name">john doe</div>
                                         <div class="people-job">Microshop Crop.SEO</div>
                                     </div>
@@ -477,14 +442,7 @@
                                         <div class="author item"><a href="#">By Admin</a></div>
                                         <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                     </div>
-                                    <div class="info-more">
-                                        <div class="view item"><i class="fa fa-user"></i>
 
-                                            <p> 56</p></div>
-                                        <div class="comment item"><i class="fa fa-comment"></i>
-
-                                            <p> 239</p></div>
-                                    </div>
                                     <div class="description">Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully less Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully Dalmatian hello amazing the...</div>
                                     <button onclick="window.location.href='news-detail.html'" class="btn btn-green"><span>learn now</span></button>
                                 </div>
@@ -497,14 +455,7 @@
                                         <div class="author item"><a href="#">By Admin</a></div>
                                         <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                     </div>
-                                    <div class="info-more">
-                                        <div class="view item"><i class="fa fa-user"></i>
 
-                                            <p> 56</p></div>
-                                        <div class="comment item"><i class="fa fa-comment"></i>
-
-                                            <p> 239</p></div>
-                                    </div>
                                     <div class="description">Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully less Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully Dalmatian hello amazing the...</div>
                                     <button onclick="window.location.href='news-detail.html'" class="btn btn-green"><span>learn now</span></button>
                                 </div>
@@ -517,14 +468,7 @@
                                         <div class="author item"><a href="#">By Admin</a></div>
                                         <div class="date-time item"><a href="#">17 sep 2015</a></div>
                                     </div>
-                                    <div class="info-more">
-                                        <div class="view item"><i class="fa fa-user"></i>
 
-                                            <p> 56</p></div>
-                                        <div class="comment item"><i class="fa fa-comment"></i>
-
-                                            <p> 239</p></div>
-                                    </div>
                                     <div class="description">Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully less Dalmatian hello amazing the rmore flung as thanks a manta dealt to under emu some the and one baldbe dear sobbingly save and spitefully Dalmatian hello amazing the...</div>
                                     <button onclick="window.location.href='news-detail.html'" class="btn btn-green"><span>learn now</span></button>
                                 </div>

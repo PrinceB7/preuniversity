@@ -40,12 +40,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # sitemaps
+    # 'django.contrib.sites',
+    # 'django.contrib.sitemaps',
+
     # third party apps
     'social.apps.django_app.default',
     'ckeditor',
     'course',
     'quiz',
     'registration',
+    'app',
 
     # chaeck this package
     # 'reportlab'
@@ -96,6 +101,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': location('database'),
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'poputi',
+    #     'USER': 'umar',
+    #     'PASSWORD': '',
+    #     'HOST': 'localhost',
+    #     'PORT': '',
+    # }
+
 }
 
 

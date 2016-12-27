@@ -10,7 +10,8 @@ urlpatterns = [
     # url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^admin/', admin.site.urls),
     url(r'social-auth/', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^$', index),
+    url(r'^$', index, name='index'),
+
 ]
 
 urlpatterns += i18n_patterns(

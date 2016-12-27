@@ -1,32 +1,35 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head><title>Pre University {% block title %}{% endblock %}</title>
+<head><title>Pre University | Contact</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LIBRARY FONT-->
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300">
-    <link type="text/css" rel="stylesheet" href="{% static "font/font-icon/font-awesome-4.4.0/css/font-awesome.css" %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'font/font-icon/font-svg/css/Glyphter.css' %}">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome-4.4.0/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-svg/css/Glyphter.css">
     <!-- LIBRARY CSS-->
-    <link type="text/css" rel="stylesheet" href="{% static 'imageslogo-color-1.png' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/animate/animate.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/color-1.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/owl-carousel-2.0/assets/owl.carousel.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/selectbox/css/jquery.selectbox.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox-buttons.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'libs/media-element/build/mediaelementplayer.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="assets/libs/animate/animate.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-3.3.5/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/owl-carousel-2.0/assets/owl.carousel.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/selectbox/css/jquery.selectbox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox-buttons.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/media-element/build/mediaelementplayer.min.css">
     <!-- STYLE CSS    --><!--link(type="text/css", rel='stylesheet', href='assets/css/color-1.css', id="color-skins")-->
     <link type="text/css" rel="stylesheet" href="#" id="color-skins">
-    <script src="{% static 'libs/jquery/jquery-2.1.4.min.js' %}"></script>
-    <script src="{% static 'libs/js-cookie/js.cookie.js' %}"></script>
+    <script src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="assets/libs/js-cookie/js.cookie.js"></script>
+    <script>if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {
+        $('#color-skins').attr('href', 'assets/css/' + Cookies.get('color-skin') + '.css');
+    } else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {
+        $('#color-skins').attr('href', 'assets/css/color-1.css');
+    }
 
+
+    </script>
 </head>
-<body>
-<!-- HEADER-->
+<body><!-- HEADER-->
 <header>
     <div class="header-topbar">
         <div class="container">
@@ -46,12 +49,11 @@
             </div>
         </div>
     </div>
-
     <div class="header-main homepage-01">
         <div class="container">
             <div class="header-main-wrapper">
                 <div class="navbar-heade">
-                    <div class="logo pull-left"><a href="{% url 'index' %}" class="header-logo"><img src="{% static 'images/logo-color-1.png' %}" alt=""/></a></div>
+                    <div class="logo pull-left"><a href="index-2.html" class="header-logo"><img src="assets/images/logo-color-1.png" alt=""/></a></div>
                     <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle edugate-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <nav class="navigation collapse navbar-collapse pull-right">
@@ -73,16 +75,98 @@
             </div>
         </div>
     </div>
-
 </header>
+<!-- WRAPPER-->
+<div id="wrapper-content"><!-- PAGE WRAPPER-->
+    <div id="page-wrapper"><!-- MAIN CONTENT-->
+        <div class="main-content"><!-- CONTENT-->
+            <div class="content">
+                <div class="section background-opacity page-title set-height-top">
+                    <div class="container">
+                        <div class="page-title-wrapper"><!--.page-title-content--><h2 class="captions">Contact</h2>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="#">Contact</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section section-padding contact-main">
+                    <div class="container">
+                        <div class="contact-main-wrapper">
+                            <div class="row contact-method">
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-map-marker"></i>
 
-{% block content %}
+                                        <p class="sub">COME TO</p>
 
-{% endblock %}
+                                        <div class="detail"><p>9, Ziyolilar, Tashkent city</p>
 
+                                            <p>Uzbekistan</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-phone"></i>
+
+                                        <p class="sub">CALL TO</p>
+
+                                        <div class="detail"><p>Local: (71) 289 99 99</p>
+
+                                            <p>Mobile: (71) 289 99 99</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="method-item"><i class="fa fa-envelope"></i>
+
+                                        <p class="sub">CONNECT TO</p>
+
+                                        <div class="detail"><p>info@inha.uz</p>
+
+                                            <p>www.inha.uz</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="bg-w-form contact-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"><label class="control-label form-label">NAME <span class="highlight">*</span></label><input type="text" placeholder="" class="form-control form-input"/><!--label.control-label.form-label.warning-label(for="") Warning for the above !--></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"><label class="control-label form-label">EMAIL <span class="highlight">*</span></label><input type="text" placeholder="" class="form-control form-input"/><!--label.control-label.form-label.warning-label(for="")--></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"><label class="control-label form-label">PURPOSE</label><select class="form-control form-input selectbox">
+                                            <option value="">Please Select</option>
+                                            <option value="">example 1</option>
+                                            <option value="">example 2</option>
+                                            <option value="">example 3</option>
+                                        </select><!--label.control-label.form-label.warning-label(for="", hidden)--></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"><label class="control-label form-label">SUBJECT</label><input type="text" placeholder="" class="form-control form-input"/><!--label.control-label.form-label.warning-label(for="", hidden)--></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="contact-question form-group"><label class="control-label form-label">HOW CAN WE HELP? <span class="highlight">*</span></label><textarea class="form-control form-input"></textarea></div>
+                                    </div>
+                                </div>
+                                <div class="contact-submit">
+                                    <button type="submit" class="btn btn-contact btn-green"><span>SUBMIT CONTACT</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" class="section contact-map"></div>
+            </div>
+        </div>
+    </div>
+    <!-- BUTTON BACK TO TOP-->
+    <div id="back-top"><a href="#top"><i class="fa fa-angle-double-up"></i></a></div>
+</div>
 <!-- FOOTER-->
 <footer>
-     <div class="footer-main">
+    <div class="footer-main">
         <div class="container">
             <div class="footer-main-wrapper">
                 <div class="row">
@@ -104,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                     </div>
                     <div class="col-2">
                         <div class="col-md-4">
@@ -114,7 +198,7 @@
                                     <div class="gallery-list"><a href="#" class="thumb"><img src="assets/images/gallery/gallery-01.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-02.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-03.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-04.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-05.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-06.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-07.jpg" alt="" class="img-responsive"/></a><a href="#" class="thumb"><img src="assets/images/gallery/gallery-08.jpg"
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         alt="" class="img-responsive"/></a></div>
                                     <div class="clearfix"></div>
-                                    <a href="gallery.html" class="view-more">View more&nbsp;<i class="fa fa-angle-double-right mls"></i></a></div>
+                                    <a href="#" class="view-more">View more&nbsp;<i class="fa fa-angle-double-right mls"></i></a></div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -150,22 +234,27 @@
 <div class="body-2 loading">
     <div class="dots-loader"></div>
 </div>
-
-<script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'libs/smooth-scroll/jquery-smoothscroll.js' %}"></script>
-<script src="{% static 'libs/owl-carousel-2.0/owl.carousel.min.js' %}"></script>
-<script src="{% static 'libs/appear/jquery.appear.js' %}"></script>
-<script src="{% static 'libs/count-to/jquery.countTo.js' %}"></script>
-<script src="{% static 'libs/wow-js/wow.min.js' %}"></script>
-<script src="{% static 'libs/selectbox/js/jquery.selectbox-0.2.min.js' %}"></script>
-<script src="{% static 'libs/fancybox/js/jquery.fancybox.js' %}"></script>
-<script src="{% static 'libs/fancybox/js/jquery.fancybox-buttons.js' %}"></script>
+<!-- JAVASCRIPT LIBS-->
+<script>if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {
+    $('.logo .header-logo img').attr('src', 'assets/images/logo-' + Cookies.get('color-skin') + '.png');
+} else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {
+    $('.logo .header-logo img').attr('src', 'assets/images/logo-color-1.png');
+}</script>
+<script src="assets/libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="assets/libs/smooth-scroll/jquery-smoothscroll.js"></script>
+<script src="assets/libs/owl-carousel-2.0/owl.carousel.min.js"></script>
+<script src="assets/libs/appear/jquery.appear.js"></script>
+<script src="assets/libs/count-to/jquery.countTo.js"></script>
+<script src="assets/libs/wow-js/wow.min.js"></script>
+<script src="assets/libs/selectbox/js/jquery.selectbox-0.2.min.js"></script>
+<script src="assets/libs/fancybox/js/jquery.fancybox.js"></script>
+<script src="assets/libs/fancybox/js/jquery.fancybox-buttons.js"></script>
 <!-- MAIN JS-->
-<script src="{% static 'js/main.js' %}"></script>
+<script src="assets/js/main.js"></script>
 <!-- LOADING SCRIPTS FOR PAGE-->
-<script src="{% static 'libs/isotope/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'libs/isotope/fit-columns.js' %}"></script>
-<script src="{% static 'js/pages/homepage.js' %}"></script>
-
+<script src="assets/libs/isotope/isotope.pkgd.min.js"></script>
+<script src="assets/libs/isotope/fit-columns.js"></script>
+<script src="assets/js/pages/homepage.js"></script>
 </body>
+
 </html>
