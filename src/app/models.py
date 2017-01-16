@@ -16,9 +16,10 @@ class News(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=127)
-    text = RichTextField()
+    workplace = models.CharField(max_length=127, blank=True)
+    text = models.TextField()
     photo = models.ImageField(upload_to='testimonials/')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.name[:30] + self.workplace[:10]

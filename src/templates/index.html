@@ -141,7 +141,7 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="progress-bar-number">
-                                                <div data-from="0" data-to="56" data-speed="1000" class="num">0</div>
+                                                <div data-from="0" data-to="{{ n_of_topics }}" data-speed="1000" class="num">0</div>
                                                 <p class="name-inner">courses</p></div>
                                         </div>
                                         <div class="col-sm-3">
@@ -178,7 +178,7 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.0.name }}</a>
+                                            <div class="edugate-content"><a href="{% url 'detail_of_subject' name='mathematics' %}" class="title">Mathematics</a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
@@ -187,7 +187,7 @@
 
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-80"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.0.description|safe }}</div>
-                                                <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
+                                                <button onclick="window.location.href='{% url 'detail_of_subject' name='mathematics' %}'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
                                             <div class="edugate-image"><img src="{% static 'images/courses/courses-1.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
@@ -196,7 +196,7 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.1.name }} </a>
+                                            <div class="edugate-content"><a href="{% url 'detail_of_subject' name='physics' %}" class="title">Physics </a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
@@ -205,7 +205,7 @@
 
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-10"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.1.description|safe }}</div>
-                                                <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
+                                                <button onclick="window.location.href='{% url 'detail_of_subject' name='physics' %}'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
                                             <div class="edugate-image"><img src="{% static 'images/courses/courses-2.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
@@ -216,7 +216,7 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.2.name }}</a>
+                                            <div class="edugate-content"><a href="{% url 'detail_of_subject' name='english' %}" class="title">English</a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
@@ -225,7 +225,7 @@
 
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-70"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.2.description|safe }}</div>
-                                                <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
+                                                <button onclick="window.location.href='{% url 'detail_of_subject' name='english' %}'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
                                             <div class="edugate-image"><img src="{% static 'images/courses/courses-3.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
@@ -235,7 +235,7 @@
                                 <div class="top-courses-item">
                                     <div class="edugate-layout-2">
                                         <div class="edugate-layout-2-wrapper">
-                                            <div class="edugate-content"><a href="courses-detail.html" class="title">{{ courses.3.name }}</a>
+                                            <div class="edugate-content"><a href="{% url 'detail_of_subject' name='ielts' %}" class="title">IELTS</a>
 
                                                 <div class="info">
                                                     <div class="author item"><a href="#">By Admin</a></div>
@@ -244,7 +244,7 @@
 
                                                 <div title="Rated 5.00 out of 5" class="star-rating"><span class="width-90"><strong class="rating">5.00</strong> out of 5</span></div>
                                                 <div class="description">{{ courses.3.description|safe }}</div>
-                                                <button onclick="window.location.href='courses-detail.html'" class="btn btn-green"><span>learn now</span></button>
+                                                <button onclick="window.location.href='{% url 'detail_of_subject' name='mathematics' %}'" class="btn btn-green"><span>learn now</span></button>
                                             </div>
                                             <div class="edugate-image"><img src="{% static 'images/courses/courses-4.jpg' %}" alt="" class="img-responsive"/></div>
                                         </div>
@@ -391,30 +391,22 @@
                     <div class="container">
                         <div id="people-talk" data-ride="carousel" data-interval="5000" class="slider-talk-about-us-wrapper carousel slide">
                             <div role="listbox" class="slider-talk-about-us-content carousel-inner">
-                                <div class="peopel-item item active"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
+                                {% for testimonial in testimonials %}
+                                    {% if forloop.counter == 1 %}
+                                    <div class="peopel-item item active">
+                                        {% else %}
+                                        <div class="peopel-item item">
+                                    {% endif %}
+
+                                    <p class="peopel-comment">" {{ testimonial.text|safe }} "</p>
 
                                     <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
-                                        <div class="peopel-name">john doe</div>
-                                        <div class="people-job">Microshop Crop.SEO</div>
+                                        <div class="peopel-avatar"><img src="{{ testimonial.photo.url }}" alt="" class="img-responsive"/></div>
+                                        <div class="peopel-name">{{ testimonial.name }}</div>
+                                        <div class="people-job">{{ testimonial.workplace }}</div>
                                     </div>
                                 </div>
-                                <div class="peopel-item item"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
-
-                                    <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
-                                        <div class="peopel-name">john doe</div>
-                                        <div class="people-job">Microshop Crop.SEO</div>
-                                    </div>
-                                </div>
-                                <div class="peopel-item item"><p class="peopel-comment">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "</p>
-
-                                    <div class="group-peole-info">
-                                        <div class="peopel-avatar"><img src="{% static 'images/people-avatar-1.jpg' %}" alt="" class="img-responsive"/></div>
-                                        <div class="peopel-name">john doe</div>
-                                        <div class="people-job">Microshop Crop.SEO</div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

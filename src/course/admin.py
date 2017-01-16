@@ -1,14 +1,6 @@
 from django.contrib import admin
 from django.template.defaultfilters import safe
-from .models import Subject, File, Topic, Homework, Exam
-
-
-class SubjectAdmin(admin.ModelAdmin):
-    list_display = ['name', 'get_description', 'created_date', 'last_modified_date']
-    fields = ['name', 'description']
-
-    def get_description(self, obj):
-        return safe(obj.description[:30])
+from .models import File, Topic, Homework, Exam
 
 
 class FileAdmin(admin.ModelAdmin):
@@ -30,7 +22,6 @@ class HomeworkAdmin(admin.ModelAdmin):
 class ExamAdmin(admin.ModelAdmin):
     list_display = ['title', 'level', 'subject']
 
-admin.site.register(Subject, SubjectAdmin)
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(Homework, HomeworkAdmin)
 admin.site.register(Exam, ExamAdmin)

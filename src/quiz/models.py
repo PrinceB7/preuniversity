@@ -9,7 +9,7 @@ from django.utils.timezone import now
 from django.utils.encoding import python_2_unicode_compatible
 from django.conf import settings
 
-from course.models import Subject
+from course.models import SUBJECTS
 
 from model_utils.managers import InheritanceManager
 
@@ -66,7 +66,7 @@ class SubCategory(models.Model):
 @python_2_unicode_compatible
 class Quiz(models.Model):
 
-    subject = models.ForeignKey(Subject, related_name='quizzes')
+    subject = models.CharField(choices=SUBJECTS, max_length=15, default=SUBJECTS[0][1])
 
     title = models.CharField(
         verbose_name=_("Title"),
