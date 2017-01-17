@@ -212,6 +212,7 @@ ACCOUNT_ACTIVATION_DAYS = 5
 
 # email settings
 # TODO change to stmp backend
+EMAIL_FROM = 'Inha University in Tashkent (Preuniversity section)'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # ckeditor settings

@@ -48,8 +48,8 @@
                                 <div class="login-title rlp-title">login to your account!</div>
                                 <div class="login-form bg-w-form rlp-form">
                                     <div class="row">
-                                        <div class="col-md-12"><label for="regemail" class="control-label form-label">email <span class="highlight">*</span></label><input id="regemail" type="email" placeholder="" class="form-control form-input"/><!--p.help-block Warning !--></div>
-                                        <div class="col-md-12"><label for="regpassword" class="control-label form-label">password <span class="highlight">*</span></label><input id="regpassword" type="password" placeholder="" class="form-control form-input"/><!-- p.help-block Warning !--></div>
+                                        <div class="col-md-12"><label for="regemail" class="control-label form-label">email <span class="highlight">*</span></label><input id="regemail" name="email" type="email" placeholder="" class="form-control form-input"/><!--p.help-block Warning !--></div>
+                                        <div class="col-md-12"><label for="regpassword" class="control-label form-label">password <span class="highlight">*</span></label><input id="regpassword" name="password" type="password" placeholder="" class="form-control form-input"/><!-- p.help-block Warning !--></div>
                                     </div>
                                 </div>
                                 <div class="login-submit">
@@ -74,36 +74,7 @@
 </div>
 <!-- FOOTER-->
 <footer></footer>
-<!-- THEME SETTING-->
-{#<div class="theme-setting">#}
-{#    <div class="theme-loading">#}
-{#        <div class="theme-loading-content">#}
-{#            <div class="dots-loader"></div>#}
-{#        </div>#}
-{#    </div>#}
-{#    <a href="javascript:;" class="btn-theme-setting"><i class="fa fa-tint"></i></a>#}
-{##}
-{#    <div class="content-theme-setting"><h2 class="title">setting color</h2>#}
-{#        <ul class="list-unstyled list-inline color-skins">#}
-{#            <li data-color="color-1"></li>#}
-{#            <li data-color="color-2"></li>#}
-{#            <li data-color="color-3"></li>#}
-{#            <li data-color="color-4"></li>#}
-{#            <li data-color="color-5"></li>#}
-{#            <li data-color="color-6"></li>#}
-{#            <li data-color="color-7"></li>#}
-{#            <li data-color="color-8"></li>#}
-{#            <li data-color="color-9"></li>#}
-{#            <li data-color="color-10"></li>#}
-{#        </ul>#}
-{#    </div>#}
-{#</div>#}
-<!-- LOADING--><!-- JAVASCRIPT LIBS-->
-<!--<script>if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {
-    $('.logo .header-logo img').attr('src', 'assets/images/logo-' + Cookies.get('color-skin') + '.png');
-} else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {
-    $('.logo .header-logo img').attr('src', 'assets/images/logo-color-1.png');
-}</script>-->
+
 <script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'libs/smooth-scroll/jquery-smoothscroll.js' %}"></script>
 <script src="{% static 'libs/owl-carousel-2.0/owl.carousel.min.js' %}"></script>
