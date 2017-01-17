@@ -130,3 +130,4 @@ build*
 .tox
 *.egg
 DBMS
+database
