@@ -30,7 +30,7 @@ class RegistrationView(FormView):
     disallowed_url = 'registration_disallowed'
     form_class = REGISTRATION_FORM
     http_method_names = ['get', 'post', 'head', 'options', 'trace']
-    template_name = 'registration/registration_form.html'
+    template_name = 'registration/register.html'
 
     @method_decorator(sensitive_post_parameters('password1', 'password2'))
     def dispatch(self, request, *args, **kwargs):

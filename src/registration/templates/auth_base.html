@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles i18n %}
+<head><title>Pre University {% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LIBRARY FONT-->
+    <link type="text/css" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300">
+    <link type="text/css" rel="stylesheet" href="{% static "font/font-icon/font-awesome-4.4.0/css/font-awesome.css" %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'font/font-icon/font-svg/css/Glyphter.css' %}">
+    <!-- LIBRARY CSS-->
+    <link type="text/css" rel="stylesheet" href="{% static 'imageslogo-color-1.png' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/animate/animate.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/color-1.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/owl-carousel-2.0/assets/owl.carousel.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/selectbox/css/jquery.selectbox.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/fancybox/css/jquery.fancybox-buttons.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'libs/media-element/build/mediaelementplayer.min.css' %}">
+
+    <!-- STYLE CSS    --><!--link(type="text/css", rel='stylesheet', href='assets/css/color-1.css', id="color-skins")-->
+    <link type="text/css" rel="stylesheet" href="#" id="color-skins">
+    <script src="{% static 'libs/jquery/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'libs/js-cookie/js.cookie.js' %}"></script>
+    {#    <script>if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1')) {#}
+    {#        $('#color-skins').attr('href', 'assets/css/' + Cookies.get('color-skin') + '.css');#}
+    {#    } else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1')) {#}
+    {#        $('#color-skins').attr('href', 'assets/css/color-1.css');#}
+    {#    }#}
+    {##}
+    {##}
+    {#    </script>#}
+</head>
+<body><!-- HEADER-->
+<header><!-- not include--></header>
+
+{% block content %}
+
+{% endblock %}
+
+<footer>
+    <script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'libs/smooth-scroll/jquery-smoothscroll.js' %}"></script>
+    <script src="{% static 'libs/owl-carousel-2.0/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'libs/appear/jquery.appear.js' %}"></script>
+    <script src="{% static 'libs/count-to/jquery.countTo.js' %}"></script>
+    <script src="{% static 'libs/wow-js/wow.min.js' %}"></script>
+    <script src="{% static 'libs/selectbox/js/jquery.selectbox-0.2.min.js' %}"></script>
+    <script src="{% static 'libs/fancybox/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'libs/fancybox/js/jquery.fancybox-buttons.js' %}"></script>
+    <!-- MAIN JS-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- LOADING SCRIPTS FOR PAGE-->
+</footer>
+</body>
+
+</html>
